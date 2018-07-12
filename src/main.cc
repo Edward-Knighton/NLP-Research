@@ -11,6 +11,7 @@
 
 #include "fasttext.h"
 #include "args.h"
+#include "preprocess.h"
 
 using namespace fasttext;
 
@@ -262,6 +263,8 @@ int main(int argc, char** argv) {
     analogies(args);
   } else if (command == "predict" || command == "predict-prob" ) {
     predict(args);
+  } else if (command == "preprocess") {
+    preprocessFile();
   } else {
     printUsage();
     exit(EXIT_FAILURE);
